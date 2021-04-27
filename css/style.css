@@ -1,0 +1,147 @@
+/** @format */
+/** @format */
+/** @format */
+:root {
+  --fuentePrincipal: "Gothic A1", sans-serif;
+  --fuenteSecundaria: "Oswald", sans-serif;
+  --primario: #f1a94e;
+  --secundario: #44b3c2;
+  --claro: #fff;
+}
+
+html * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuenteSecundaria);
+}
+
+.contenedor {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-family: var(--fuentePrincipal);
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+}
+
+/* Hero */
+.hero {
+  background-image: url(../img/fondo.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero .titulo {
+  margin: 0;
+}
+.hero .subtitulo {
+  font-size: 1.2rem;
+}
+.hero .contenedor {
+  display: grid;
+  align-content: center;
+  height: 100vh;
+}
+.hero .contenido {
+  text-align: center;
+  color: var(--claro);
+}
+
+/* Servicios */
+.servicios {
+  text-align: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.servicios h2 {
+  padding-bottom: 0.5rem;
+}
+.servicios h2:after {
+  height: 0.2rem;
+  width: 7rem;
+  background-color: var(--primario);
+  content: "";
+  display: block;
+  margin: 1rem auto 0 auto;
+}
+.servicios i {
+  font-size: 2rem;
+  color: var(--secundario);
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+.portafolio {
+  margin: 2rem auto;
+}
+.portafolio .listado {
+  gap: 1rem;
+}
+.portafolio .listado .elemento {
+  margin-bottom: 2rem;
+  box-shadow: 0px 8px 12px -8px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 1200px) {
+  .portafolio .listado .elemento {
+    box-shadow: unset;
+  }
+}
+.portafolio .listado .elemento .contenido {
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .portafolio .listado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    grid-auto-rows: max-content;
+  }
+  .portafolio .elemento:nth-child(3) {
+    grid-row-end: span 2;
+  }
+}
+
+.footer {
+  background-image: url(../img/contacto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--claro);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .footer .contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 30%) auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
